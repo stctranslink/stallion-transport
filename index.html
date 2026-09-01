@@ -1,116 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Stallion Transportation Company | Flatbed & Freight Shipping</title>
-  <style>
-    :root {
-      --primary: #0b2545;
-      --accent: #d90429;
-      --light: #f8f9fa;
-      --dark: #1a1a1a;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, sans-serif; }
-    body { color: var(--dark); line-height: 1.6; }
-    
-    header { background: var(--primary); color: white; padding: 0.8rem 5%; display: flex; justify-content: space-between; align-items: center; }
-    .logo-container { display: flex; align-items: center; gap: 10px; }
-    .logo-img { max-height: 50px; width: auto; }
-    .logo-text { font-size: 1.4rem; font-weight: bold; text-transform: uppercase; color: #fff; }
-    
-    .nav-contact { display: flex; gap: 1.5rem; align-items: center; }
-    .nav-contact a { color: white; text-decoration: none; font-weight: 500; }
-    .btn { background: var(--accent); color: white; padding: 0.6rem 1.2rem; border-radius: 4px; text-decoration: none; font-weight: bold; }
-    
-    /* Hero section with customizable background image */
-    .hero { 
-      background: linear-gradient(rgba(11,37,69,0.75), rgba(11,37,69,0.75)), url('images/hero-truck.jpg') center/cover no-repeat; 
-      color: white; 
-      padding: 6rem 5%; 
-      text-align: center; 
-    }
-    .hero h1 { font-size: 2.8rem; margin-bottom: 1rem; }
-    .hero p { font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem; }
-    
-    .services { padding: 4rem 5%; background: var(--light); text-align: center; }
-    .services h2 { margin-bottom: 2.5rem; color: var(--primary); font-size: 2rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-    
-    .card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 10px rgba(0,0,0,0.08); text-align: left; }
-    .card-img { width: 100%; height: 200px; object-fit: cover; }
-    .card-content { padding: 1.5rem; }
-    .card-content h3 { color: var(--primary); margin-bottom: 0.5rem; }
-    
-    .contact-bar { background: var(--primary); color: white; padding: 3rem 5%; text-align: center; }
-    .contact-bar h2 { margin-bottom: 1rem; }
-    
-    footer { background: #051221; color: #aaa; text-align: center; padding: 1.5rem; font-size: 0.9rem; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stallion Transportation Company | Dedicated Freight & Logistics Ontario</title>
+    <meta name="description" content="Stallion Transportation Company is an Ontario-owned and operated transportation business focused on reliable, professional, and efficient logistics services across the province and beyond.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --brand-orange: #FF6B00;
+            --brand-dark: #0B0F17;
+            --brand-card: #161C28;
+        }
+        body {
+            background-color: var(--brand-dark);
+            color: #E2E8F0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+        .hero-overlay {
+            background: linear-gradient(180deg, rgba(11, 15, 23, 0.75) 0%, rgba(11, 15, 23, 0.98) 100%),
+                        url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+        }
+        .glow-hover:hover {
+            box-shadow: 0 0 25px rgba(255, 107, 0, 0.35);
+        }
+    </style>
 </head>
-<body>
+<body class="antialiased selection:bg-orange-500 selection:text-white">
 
-  <header>
-    <div class="logo-container">
-      <!-- Upload logo.png to your images folder on GitHub -->
-      <img src="images/logo.png" alt="Stallion Transportation Logo" class="logo-img" onerror="this.style.display='none'">
-      <span class="logo-text">Stallion Transportation</span>
-    </div>
-    <div class="nav-contact">
-      <a href="tel:+16473081397">📞 +1 (647) 308-1397</a>
-      <a href="mailto:stctranslink@gmail.com" class="btn">Get a Quote</a>
-    </div>
-  </header>
+    <nav class="fixed top-0 w-full z-50 bg-[#0B0F17]/90 backdrop-blur-md border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="logo.png" alt="Stallion Transportation Company Logo" class="h-12 w-auto object-contain" onerror="this.style.display='none'; document.getElementById('text-logo').style.display='flex';">
+                <div id="text-logo" class="flex items-center space-x-3">
+                    <div class="bg-[#FF6B00] text-black font-black text-2xl p-2 rounded tracking-tighter">STC</div>
+                    <div class="leading-none">
+                        <span class="block font-bold text-lg text-white tracking-wider">STALLION</span>
+                        <span class="block text-xs text-[#FF6B00] font-semibold tracking-widest">TRANSPORTATION COMPANY</span>
+                    </div>
+                </div>
+            </a>
+            
+            <div class="hidden md:flex space-x-8 text-sm font-medium tracking-wide text-gray-300">
+                <a href="#about" class="hover:text-[#FF6B00] transition">ABOUT</a>
+                <a href="#services" class="hover:text-[#FF6B00] transition">SERVICES</a>
+                <a href="#why-us" class="hover:text-[#FF6B00] transition">WHY STALLION</a>
+                <a href="#service-area" class="hover:text-[#FF6B00] transition">SERVICE AREA</a>
+                <a href="#contact" class="hover:text-[#FF6B00] transition">CONTACT</a>
+            </div>
 
-  <section class="hero">
-    <h1>Reliable Flatbed & Freight Transportation</h1>
-    <p>Providing specialized flatbed transport across Canada and North America with safe, on-time delivery guaranteed.</p>
-    <a href="tel:+16473081397" class="btn" style="font-size: 1.1rem; padding: 0.8rem 1.8rem;">Call Now: +1 (647) 308-1397</a>
-  </section>
-
-  <section class="services">
-    <h2>Our Transportation Services</h2>
-    <div class="grid">
-      
-      <div class="card">
-        <img src="images/flatbed.jpg" alt="Flatbed Trucking" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600'">
-        <div class="card-content">
-          <h3>Flatbed Trucking</h3>
-          <p>Ideal for construction materials, machinery, equipment, and oversized loads requiring side or top loading.</p>
+            <a href="#contact" class="hidden sm:inline-block bg-[#FF6B00] hover:bg-orange-600 text-black font-bold px-6 py-2.5 rounded text-sm transition glow-hover uppercase tracking-wider">
+                Request a Quote
+            </a>
         </div>
-      </div>
+    </nav>
 
-      <div class="card">
-        <img src="images/specialized.jpg" alt="Specialized Freight" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600'">
-        <div class="card-content">
-          <h3>Specialized Freight</h3>
-          <p>Customized heavy-haul and step-deck solutions for complex logistics requirements.</p>
+    <section class="hero-overlay pt-32 pb-20 md:pt-48 md:pb-36 px-4">
+        <div class="max-w-5xl mx-auto text-center space-y-6">
+            <span class="inline-block border border-[#FF6B00] text-[#FF6B00] font-semibold text-xs md:text-sm px-4 py-1.5 rounded-full uppercase tracking-widest bg-[#FF6B00]/10">
+                Ontario-Owned & Operated Logistics
+            </span>
+            <h1 class="text-4xl md:text-7xl font-extrabold text-white tracking-tight uppercase">
+                Strong. Steady. <span class="text-[#FF6B00]">Stallion.</span>
+            </h1>
+            <p class="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto font-light">
+                Reliable Transportation. Professional Service. Every Mile.
+            </p>
+            <div class="pt-6 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#contact" class="bg-[#FF6B00] text-black font-extrabold text-lg px-8 py-4 rounded hover:bg-orange-600 transition glow-hover uppercase tracking-wider">
+                    Request a Quote
+                </a>
+                <a href="tel:6473081397" class="bg-gray-800 text-white font-bold text-lg px-8 py-4 rounded border border-gray-700 hover:bg-gray-700 transition flex items-center justify-center gap-2">
+                    <i class="fas fa-phone text-[#FF6B00]"></i> +(647) 308-1397
+                </a>
+            </div>
         </div>
-      </div>
+    </section>
 
-      <div class="card">
-        <img src="images/fleet.jpg" alt="Dedicated Fleet Shipping" class="card-img" onerror="this.src='https://images.unsplash.com/photo-1519003722824-194d4455a60c?w=600'">
-        <div class="card-content">
-          <h3>Dedicated Shipping</h3>
-          <p>Direct point-to-point transportation ensuring safety and fast delivery times across regions.</p>
+    <section id="about" class="py-20 border-b border-gray-800">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <h2 class="text-xs font-bold text-[#FF6B00] uppercase tracking-widest">About Us</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Built for Ontario's Transportation Needs</h3>
+                <p class="text-gray-400 leading-relaxed text-lg">
+                    Stallion Transportation Company is an Ontario-owned and operated transportation business focused on reliable, professional, and efficient logistics services across the province and beyond.
+                </p>
+                <div class="grid grid-cols-2 gap-4 pt-4 border-t border-gray-800">
+                    <div>
+                        <div class="text-3xl font-extrabold text-white">100%</div>
+                        <div class="text-sm text-gray-400">Ontario Focused</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-extrabold text-[#FF6B00]">24/7</div>
+                        <div class="text-sm text-gray-400">Dispatch Support</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-[#161C28] p-8 rounded-xl border border-gray-800 space-y-4">
+                <h4 class="text-xl font-bold text-white">Our Fleet Standard</h4>
+                <p class="text-gray-400 text-sm">We focus on dependable high-capacity transportation solutions, ensuring your goods arrive safely, securely, and strictly on schedule.</p>
+                <ul class="space-y-3 text-sm font-medium">
+                    <li class="flex items-center text-gray-200"><i class="fas fa-check text-[#FF6B00] mr-3"></i> Dedicated Transportation Capacity</li>
+                    <li class="flex items-center text-gray-200"><i class="fas fa-check text-[#FF6B00] mr-3"></i> Scheduled Food & Grocery Distribution</li>
+                    <li class="flex items-center text-gray-200"><i class="fas fa-check text-[#FF6B00] mr-3"></i> Regional Linehaul & Shuttles</li>
+                </ul>
+            </div>
         </div>
-      </div>
+    </section>
 
-    </div>
-  </section>
-
-  <section class="contact-bar">
-    <h2>Need Immediate Dispatch or a Quote?</h2>
-    <p>Contact our team directly to arrange your shipment.</p>
-    <p style="margin-top: 1rem; font-size: 1.2rem;">
-      <strong>Phone:</strong> <a href="tel:+16473081397" style="color: #fff;">+1 (647) 308-1397</a> | 
-      <strong>Email:</strong> <a href="mailto:stctranslink@gmail.com" style="color: #fff;">stctranslink@gmail.com</a>
-    </p>
-  </section>
-
-  <footer>
-    <p>&copy; Stallion Transportation Company. All rights reserved.</p>
-  </footer>
-
-</body>
-</html>
+    <section id="services" class="py-20 bg-[#161C28]">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <h2 class="text-xs font-bold text-[#FF6B00] uppercase tracking-widest">Our Services</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-white">Commercial Logistics & Distribution</h3>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-black/50 p-8 rounded-lg border border-gray-800 hover:border-[#FF6B00] transition">
+                    <div class="text-[#FF6B00] text-3xl mb-4"><i class="fas fa-truck-moving"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-2">Dedicated Transportation</h4>
+                    <p class="text-gray-400 text-sm">Tailored fleets and capacity assigned strictly to your distribution requirements.</p>
+                </div>
+                <div class="bg-black/50 p-8 rounded-lg border border-gray-800 hover:border-[#FF6B00] transition">
+                    <div class="text-[#FF6B00] text-3xl mb-4"><i class="fas fa-box-open"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-2">Food & Grocery Distribution</h4>
+                    <p class="text-gray-400 text-sm">Time-critical, sanitary food and retail freight handling for local and regional networks.</p>
+                </div>
+                <div class="bg-black/50 p-8 rounded-lg border border-gray-800 hover:border-[#FF6B00] transition">
+                    <div class="text-[#FF6B00] text-3xl mb-4"><i class="fas fa-sync-alt"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-2">Transfer & Linehaul Services</h4>
+                    <p class="text-gray-400 text-sm">High-efficiency corridor shuttles connecting major logistics hubs and warehouse facilities.</p>
+                </div>
+                <div class="bg-black/50 p-8 rounded-lg border border-gray-800 hover:border-[#FF6B00] transition">
+                    <div class="text-[#FF6B00] text-3xl mb-4"><i class="fas fa-building"></i></div>
+                    <h4 class="text-xl font-bold text-white mb-2">Dedicated Contract Transportation</h4>
+                    <p class="text-gray-400 text-sm">Long-term custom logistics partnerships to handle your primary ongoing capacity.</p>
+                </div>
+                <div class="bg-black/50 p-8 rounded-lg border border-gray-800 hover:border-[#FF6B00] transition">
+                    <div class="text-[#FF6B00] text-3xl mb-4"><i class="fas fa-map-marked-alt">
